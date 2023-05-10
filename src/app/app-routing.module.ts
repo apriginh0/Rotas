@@ -5,7 +5,11 @@ import { CardComponent } from './pages/portifolio/card/card.component';
 
 const routes: Routes = [
   {path:'', component: TitleComponent, pathMatch:'full'},
-  {path:'portifolio/:id', component: CardComponent, pathMatch:'prefix'},
+  //portifolio/id são children de portifolio/
+  {path:'portifolio', component: CardComponent, children:[
+    {path:':id', component: CardComponent},
+    {path:':id/:token', component: CardComponent}
+  ]},
   {path:'**', redirectTo:''}, //Rota coringa, redirecionando...
 ];
 

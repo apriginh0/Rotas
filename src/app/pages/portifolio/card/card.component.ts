@@ -15,14 +15,18 @@ export class CardComponent implements OnInit {
     this.parametrizador.params.subscribe(
       res => console.log(res)
     )
+
+    this.parametrizador.firstChild?.params.subscribe(
+      res => console.log(res)
+    )
     //http://localhost:4200/portifolio/{name=Diego&token=123}
     this.parametrizador.queryParams.subscribe(
       res => console.log(res)
     )
   }
   ngOnInit(): void {
-    setInterval(()=>{
-      this.navegador.navigate(['/'])
-    }, 5000);
+    // setInterval(()=>{
+    //   this.navegador.navigate(['/'])
+    // }, 5000);
   }
 }
