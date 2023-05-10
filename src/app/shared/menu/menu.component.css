@@ -1,0 +1,17 @@
+li > a {
+   text-decoration: none;
+   color: gray;
+}
+
+li > .activatedone{
+   color: red;
+}
+
+li > .activatedtwo{
+   color: blue;
+}
+
+.fundo{
+   background-color: black;
+}
+
